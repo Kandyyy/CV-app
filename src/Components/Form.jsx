@@ -10,13 +10,6 @@ class Form extends Component {
             eduClicked: false,
             workClicked: false,
             preview: false,
-
-            generalInfo: {
-                fname: "",
-                lname: "",
-                email: "",
-                phno: ""
-            },
         }
     }
 
@@ -56,58 +49,10 @@ class Form extends Component {
         });
     }
 
-    updateName = (e) => {
-        this.setState((prevState)=>{
-            return ({
-                ...prevState,
-                generalInfo: {
-                    ...prevState.generalInfo,
-                    fname: e.target.value
-                }
-            });
-        });
-    }
-
-    updateLname = (e) => {
-        this.setState((prevState)=>{
-            return ({
-                ...prevState,
-                generalInfo: {
-                    ...prevState.generalInfo,
-                    lname: e.target.value
-                }
-            });
-        });
-    }
-
-    updateEmail = (e) => {
-        this.setState((prevState)=>{
-            return ({
-                ...prevState,
-                generalInfo: {
-                    ...prevState.generalInfo,
-                    email: e.target.value
-                }
-            });
-        });
-    }
-
-    updatePh = (e) => {
-        this.setState((prevState)=>{
-            return ({
-                ...prevState,
-                generalInfo: {
-                    ...prevState.generalInfo,
-                    phno: e.target.value
-                }
-            });
-        });
-    }
-
   render() {
     return (
         <div id='form-div'>
-            <GeneralInfo updateName={this.updateName} updateLname={this.updateLname} updateEmail={this.updateEmail} updatePh={this.updatePh}/>
+            <GeneralInfo updateName={this.props.updateName} updateLname={this.props.updateLname} updateEmail={this.props.updateEmail} updatePh={this.props.updatePh}/>
             <div className="linebreak"></div>
             <div id='education-div'>
                 <h4 id='education'>Education</h4>

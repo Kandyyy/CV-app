@@ -7,7 +7,7 @@ export default class Preview extends Component {
       <div className="bruh">
         <div className='preview-div'>
             <div className="bar">
-              <div className="name">Samit Tungare</div>
+              <div className="name">{this.props.fname} {this.props.lname}</div>
               <div className="field">Software Developer</div>
             </div>
             <div className="content">
@@ -48,11 +48,11 @@ export default class Preview extends Component {
                       </div>
                       <div className="phone">
                           <div className="phone-title">Phone Number</div>
-                          <p id='interior'>9128320138</p>
+                          <p id='interior'>{this.props.phno}</p>
                       </div>
                       <div className="email">
                           <div className="email-title">Email Address</div>
-                          <p id='interior'>kandeeznuts@gmail.com</p>
+                          <p id='interior'>{this.props.email}</p>
                       </div>
                   </div>
               </div>
