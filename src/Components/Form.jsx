@@ -31,14 +31,14 @@ class Form extends Component {
         });
     }
 
-    eduHandlerNegate = () => {
+    /*eduHandlerNegate = () => {
         this.setState((prevState)=>{
             return ({
                 ...prevState,
                 eduClicked: false
             });
         });
-    }
+    }*/
 
     workHandlerNegate = () => {
         this.setState((prevState)=>{
@@ -56,8 +56,8 @@ class Form extends Component {
             <div className="linebreak"></div>
             <div id='education-div'>
                 <h4 id='education'>Education</h4>
-                <button className="btn btn-dark" id='add' onClick={this.eduHandler.bind(this)}>Add</button>
-                {this.state.eduClicked && (<Education eduHandlerNegate={this.eduHandlerNegate} />)}
+                <button className="btn btn-dark" id='add' type='button' onClick={this.eduHandler.bind(this)}>Add</button>
+                {this.state.eduClicked && (<Education EduFormHandler={this.props.EduFormHandler}/>)}
                 <div className="linebreak"></div>
             </div>
             <div id='work-div'>

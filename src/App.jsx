@@ -15,7 +15,8 @@ class App extends Component {
         lname: "Doe",
         email: "JohnDoe@gmail.com",
         phno: "9812830174"
-      }
+      },
+      educationInfo: []
     }
   }
 
@@ -29,9 +30,9 @@ class App extends Component {
             }
         });
     });
-}
+  }
 
-updateLname = (e) => {
+  updateLname = (e) => {
     this.setState((prevState)=>{
         return ({
             ...prevState,
@@ -41,9 +42,9 @@ updateLname = (e) => {
             }
         });
     });
-}
+  }
 
-updateEmail = (e) => {
+  updateEmail = (e) => {
     this.setState((prevState)=>{
         return ({
             ...prevState,
@@ -53,9 +54,9 @@ updateEmail = (e) => {
             }
         });
     });
-}
+  }
 
-updatePh = (e) => {
+  updatePh = (e) => {
     this.setState((prevState)=>{
         return ({
             ...prevState,
@@ -65,7 +66,17 @@ updatePh = (e) => {
             }
         });
     });
-}
+  }
+
+  updateEducation = (data) => {
+    this.setState((prevState)=>{
+        let updatedEducationInfo = [...prevState.educationInfo, data]; 
+        return ({
+          ...prevState,
+          educationInfo: updatedEducationInfo
+        });
+    });
+  }
 
   previewHandler = () => {
     this.setState((prevState)=>{
@@ -73,14 +84,24 @@ updatePh = (e) => {
           ...prevState,
           preview: !this.state.preview
       });
-  });
-}
+    });
+  }
+
+  EduFormHandler = (e) => {
+    e.preventDefault();
+    let form = e.target;
+    let formData = new FormData(form);
+    let jsonData = Object.fromEntries(formData.entries());
+    this.updateEducation(jsonData);
+    console.log(this.state.educationInfo);
+  }
+
 
   render() {
     return (
       <div className='App'>
         <h1 id='header'>CVgen</h1>
-        {this.state.preview ? <Preview previewHandler={this.previewHandler} fname={this.state.generalInfo.fname} lname={this.state.generalInfo.lname} email={this.state.generalInfo.email} phno={this.state.generalInfo.phno} />:<Form previewHandler={this.previewHandler} updateName={this.updateName} updateLname={this.updateLname} updateEmail={this.updateEmail} updatePh={this.updatePh}/>}
+        {this.state.preview ? <Preview previewHandler={this.previewHandler} fname={this.state.generalInfo.fname} lname={this.state.generalInfo.lname} email={this.state.generalInfo.email} phno={this.state.generalInfo.phno} educationInfo={this.state.educationInfo}/>:<Form previewHandler={this.previewHandler} updateName={this.updateName} updateLname={this.updateLname} updateEmail={this.updateEmail} updatePh={this.updatePh} EduFormHandler={this.EduFormHandler}/>}
       </div>
     )
   }

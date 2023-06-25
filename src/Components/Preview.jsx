@@ -16,10 +16,10 @@ export default class Preview extends Component {
                   <h5>Education</h5>
                   <div className="linebreak2"></div>
                   <div className="edu-content">
-                    <div className="edu-lhs">2023-2024</div>
+                    <div className="edu-lhs">{this.props.educationInfo[0].sdate.slice(0,4)}-{this.props.educationInfo[0].edate.slice(0,4)}</div>
                     <div className="edu-rhs">
-                      <div className="clg-name">MIT-WPU</div>
-                      <div className="degree">B-Tech CSE</div>
+                      <div className="clg-name">{this.props.educationInfo[0].schoolname}</div>
+                      <div className="degree">{this.props.educationInfo[0].degree}</div>
                     </div>
                   </div>
                 </div>
