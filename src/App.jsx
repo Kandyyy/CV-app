@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import '../src/styles/App.css'
+import React, { Component } from 'react';
+import '../src/styles/App.css';
 import Form from './Components/Form';
-import Preview from './Components/Preview'
+import Preview from './Components/Preview';
 
 class App extends Component {
 
@@ -16,7 +16,8 @@ class App extends Component {
         email: "JohnDoe@gmail.com",
         phno: "9812830174"
       },
-      educationInfo: []
+      educationInfo: [],
+      workInfo: []
     }
   }
 
@@ -78,6 +79,16 @@ class App extends Component {
     });
   }
 
+  updateWork = (data) => {
+    this.setState((prevState)=>{
+      let updatedWorkInfo = [...prevState.workInfo, data]; 
+      return ({
+        ...prevState,
+        workInfo: updatedWorkInfo
+      });
+  });
+  }
+
   previewHandler = () => {
     this.setState((prevState)=>{
       return ({
@@ -96,12 +107,20 @@ class App extends Component {
     console.log(this.state.educationInfo);
   }
 
+  WorkFormHandler = (e) => {
+    e.preventDefault();
+    let form = e.target;
+    let formData = new FormData(form);
+    let jsonData = Object.fromEntries(formData.entries());
+    this.updateWork(jsonData);
+  }
+
 
   render() {
     return (
       <div className='App'>
         <h1 id='header'>CVgen</h1>
-        {this.state.preview ? <Preview previewHandler={this.previewHandler} fname={this.state.generalInfo.fname} lname={this.state.generalInfo.lname} email={this.state.generalInfo.email} phno={this.state.generalInfo.phno} educationInfo={this.state.educationInfo}/>:<Form previewHandler={this.previewHandler} updateName={this.updateName} updateLname={this.updateLname} updateEmail={this.updateEmail} updatePh={this.updatePh} EduFormHandler={this.EduFormHandler}/>}
+        {this.state.preview ? <Preview previewHandler={this.previewHandler} fname={this.state.generalInfo.fname} lname={this.state.generalInfo.lname} email={this.state.generalInfo.email} phno={this.state.generalInfo.phno} educationInfo={this.state.educationInfo} workInfo={this.state.workInfo}/>:<Form previewHandler={this.previewHandler} updateName={this.updateName} updateLname={this.updateLname} updateEmail={this.updateEmail} updatePh={this.updatePh} EduFormHandler={this.EduFormHandler} WorkFormHandler={this.WorkFormHandler}/>}
       </div>
     )
   }

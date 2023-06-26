@@ -155,6 +155,7 @@ label{
   height: 1.5px;
   width: 90%;
   background-color: rgb(199, 199, 199);
+  margin-bottom: 1em;
 }
 
 .edu-content, .work-content{
@@ -180,4 +181,18 @@ label{
 .bruh button{
   align-self: center;
   width: 15%;
+}
+
+.edu-content ul, .work-content ul{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.edu-content ul li, .work-content ul li{
+  display: flex;
+  gap: 3em;
 }

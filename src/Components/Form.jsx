@@ -40,14 +40,14 @@ class Form extends Component {
         });
     }*/
 
-    workHandlerNegate = () => {
+    /*workHandlerNegate = () => {
         this.setState((prevState)=>{
             return ({
                 ...prevState,
                 workClicked: false
             });
         });
-    }
+    }*/
 
   render() {
     return (
@@ -63,7 +63,7 @@ class Form extends Component {
             <div id='work-div'>
             <h4 id='work'>Work Experience</h4>
                 <button className="btn btn-dark" id='add' onClick={this.workHandler.bind(this)}>Add</button>
-                {this.state.workClicked && (<Work workHandlerNegate={this.workHandlerNegate} />)}
+                {this.state.workClicked && (<Work WorkFormHandler={this.props.WorkFormHandler} />)}
                 <div className="linebreak"></div>
             </div>
             <button className='btn btn-primary' id='preview' onClick={this.props.previewHandler}>Preview</button>
