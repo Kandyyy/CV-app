@@ -9,21 +9,21 @@ class Work extends Component {
                     <div className="row">
                         <div className="col">
                             <label htmlFor="cname" className="form-label">Company Name</label>
-                            <input type="text" className="form-control" id='cname' placeholder='TheBestCompany' name='companyname'/> 
+                            <input type="text" className="form-control" id='work-inp' placeholder='TheBestCompany' name='companyname'/> 
                         </div>
                         <div className="col">
                             <label htmlFor="title" className="form-label">Job Title</label>
-                            <input type="text" className="form-control" id='title' placeholder='Senior Web Developer' name='title'/> 
+                            <input type="text" className="form-control" id='work-inp' placeholder='Senior Web Developer' name='title'/> 
                         </div>
                     </div>
                     <div className="row">
                         <div className="col">
                             <label htmlFor="expertise" className="form-label">Skilled Areas</label>
-                            <input type="text" className="form-control" id='expertise' placeholder='Django, Node, VueJS' name='skills'/> 
+                            <input type="text" className="form-control" id='work-inp' placeholder='Django, Node, VueJS' name='skills'/> 
                         </div>
                         <div className="col">
                             <label htmlFor="yoe" className="form-label">Experience</label>
-                            <input type="text" className="form-control" id='yoe' placeholder='7.5 YOE' name='experience'/> 
+                            <input type="text" className="form-control" id='work-inp' placeholder='7.5 YOE' name='experience'/> 
                         </div>
                     </div>
                     <button className="btn btn-dark" type='submit'>Submit</button>

@@ -163,9 +163,15 @@ label{
   gap: 4em;
 }
 
-.edu-lhs, .work-lhs{
+.edu-lhs{
   font-size: 16px;
   font-weight: 550;
+}
+
+.work-lhs{
+  font-size: 16px;
+  font-weight: 550;
+  width: 20%;
 }
 
 .edu-rhs, .work-rhs{

@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
-import pfp from "../user.png"
+//import pfp from "../user.png"
 
 export default class Preview extends Component {
 
   render() {
-    let {previewHandler, fname, lname, email, phno, educationInfo, workInfo} = this.props;
+    let {previewHandler, fname, lname, email, phno, prof, address, pic, educationInfo, workInfo} = this.props;
     return (
       <div className="bruh">
         <div className='preview-div'>
             <div className="bar">
               <div className="name">{fname} {lname}</div>
-              <div className="field">Software Developer</div>
+              <div className="field">{prof}</div>
             </div>
             <div className="content">
               <div className="lhs">
@@ -24,12 +24,12 @@ export default class Preview extends Component {
                           <li>
                             <div className="edu-lhs">{obj.sdate.slice(0,4)} - {obj.edate.slice(0,4)}</div>
                             <div className="edu-rhs">
-                              <div className="clg-name">{obj.schoolname}</div>
+                              <div className="clg-name">{obj.schoolname},</div>
                               <div className="degree">{obj.degree}</div>
                             </div>
                           </li>
                         )
-                      }):console.log("bruh")}
+                      }):"None"}
                     </ul>
                   </div>
                 </div>
@@ -43,26 +43,26 @@ export default class Preview extends Component {
                             <li>
                               <div className="work-lhs">{obj.title}</div>
                               <div className="work-rhs">
-                                <div className="company-name">{obj.companyname}</div>
+                                <div className="company-name">{obj.companyname},</div>
                                 <div className="tech">{obj.skills}</div>
                                 <div className="time">{obj.experience}</div>
                               </div>
                             </li>
                           )
-                        }):console.log("bruh2")}
+                        }):"Get a job lol"}
                       </ul>
                     </div>
                 </div>
               </div>
               <div className="rhs">
                   <div className="pfp">
-                      <img src={pfp} alt="" />
+                      <img src={pic} alt="" />
                   </div>
                   <h4>Personal Details</h4>
                   <div className="personal-details">
                       <div className="address">
                           <div className='add-title'>Address</div>
-                          <p id='interior'>Deez Nuts, 72nd Street, North Av.</p>
+                          <p id='interior'>{address}</p>
                       </div>
                       <div className="phone">
                           <div className="phone-title">Phone Number</div>
@@ -76,7 +76,7 @@ export default class Preview extends Component {
               </div>
             </div>
         </div>
-        <button className='btn btn-dark' onClick={previewHandler}>Edit Resume</button>
+        <button className='btn btn-primary' onClick={previewHandler}>Edit Resume</button>
       </div>
     )
   }

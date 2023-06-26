@@ -24,6 +24,22 @@ class GeneralInfo extends Component {
                 <input type="text" className="form-control" id='ph' placeholder='9829237128' onChange={this.props.updatePh}/>
             </div>
         </div>
+        <div className="row">
+          <div className="col">
+                <label htmlFor="prof" className="form-label">Profession</label>
+                <input type="text" className="form-control" id='prof' placeholder='Software Developer' onChange={this.props.updateProfession}/>
+          </div>
+          <div className="col">
+                <label htmlFor="address" className="form-label">Address</label>
+                <input type="text" className="form-control" id='address' placeholder='47, Whites Road, Royapeetah' onChange={this.props.updateAddress}/>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <label htmlFor="formFile" className="form-label">Picture</label>
+            <input className="form-control" type="file" id="formFile" onChange={this.props.updateProfilePic}/>
+          </div>
+        </div>
       </div>
     )
   }

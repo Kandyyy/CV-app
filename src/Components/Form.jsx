@@ -52,7 +52,15 @@ class Form extends Component {
   render() {
     return (
         <div id='form-div'>
-            <GeneralInfo updateName={this.props.updateName} updateLname={this.props.updateLname} updateEmail={this.props.updateEmail} updatePh={this.props.updatePh}/>
+            <GeneralInfo
+                updateName={this.props.updateName} 
+                updateLname={this.props.updateLname} 
+                updateEmail={this.props.updateEmail} 
+                updatePh={this.props.updatePh}
+                updateProfession={this.props.updateProfession}
+                updateAddress={this.props.updateAddress}
+                updateProfilePic={this.props.updateProfilePic}
+            />
             <div className="linebreak"></div>
             <div id='education-div'>
                 <h4 id='education'>Education</h4>
