@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-//import pfp from "../user.png"
 
 export default class Preview extends Component {
 

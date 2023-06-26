@@ -31,24 +31,6 @@ class Form extends Component {
         });
     }
 
-    /*eduHandlerNegate = () => {
-        this.setState((prevState)=>{
-            return ({
-                ...prevState,
-                eduClicked: false
-            });
-        });
-    }*/
-
-    /*workHandlerNegate = () => {
-        this.setState((prevState)=>{
-            return ({
-                ...prevState,
-                workClicked: false
-            });
-        });
-    }*/
-
   render() {
     return (
         <div id='form-div'>
