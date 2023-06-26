@@ -97,18 +97,6 @@ class App extends Component {
     });
   }
 
-  updateProfilePic = (e) => {
-    this.setState((prevState)=>{
-        return ({
-            ...prevState,
-            generalInfo: {
-                ...prevState.generalInfo,
-                pic: e.target.value
-            }
-        });
-    });
-  }
-
   updateEducation = (data) => {
     this.setState((prevState)=>{
         let updatedEducationInfo = [...prevState.educationInfo, data]; 
@@ -176,7 +164,6 @@ class App extends Component {
             phno={this.state.generalInfo.phno}
             prof={this.state.generalInfo.prof}
             address={this.state.generalInfo.address}
-            pic={this.state.generalInfo.pic}
             educationInfo={this.state.educationInfo}
             workInfo={this.state.workInfo}
           />
@@ -189,7 +176,6 @@ class App extends Component {
             updatePh={this.updatePh}
             updateProfession={this.updateProfession}
             updateAddress={this.updateAddress}
-            updateProfilePic={this.updateProfilePic}
             EduFormHandler={this.EduFormHandler}
             WorkFormHandler={this.WorkFormHandler}
           />

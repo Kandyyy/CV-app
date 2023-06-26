@@ -1,9 +1,10 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import pfp from "../user.png";
 
 export default class Preview extends Component {
 
   render() {
-    let {previewHandler, fname, lname, email, phno, prof, address, pic, educationInfo, workInfo} = this.props;
+    let {previewHandler, fname, lname, email, phno, prof, address, educationInfo, workInfo} = this.props;
     return (
       <div className="bruh">
         <div className='preview-div'>
@@ -55,7 +56,7 @@ export default class Preview extends Component {
               </div>
               <div className="rhs">
                   <div className="pfp">
-                      <img src={pic} alt="" />
+                      <img src={pfp} alt=""/>
                   </div>
                   <h4>Personal Details</h4>
                   <div className="personal-details">
