@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/CV-app/static/css/main.54a0af7a.css",
-    "main.js": "/CV-app/static/js/main.24d19a6e.js",
+    "main.js": "/CV-app/static/js/main.87f27719.js",
     "index.html": "/CV-app/index.html",
     "main.54a0af7a.css.map": "/CV-app/static/css/main.54a0af7a.css.map",
-    "main.24d19a6e.js.map": "/CV-app/static/js/main.24d19a6e.js.map"
+    "main.87f27719.js.map": "/CV-app/static/js/main.87f27719.js.map"
   },
   "entrypoints": [
     "static/css/main.54a0af7a.css",
-    "static/js/main.24d19a6e.js"
+    "static/js/main.87f27719.js"
   ]
 }
