@@ -13,7 +13,7 @@ class Education extends Component {
                   </div>
                   <div className="col">
                       <label htmlFor="qualification" className="form-label">Qualification</label>
-                      <input type="text" className="form-control" id='edu-inp' placeholder='Masters/Bachlors' name='degree'/>
+                      <input type="text" className="form-control" id='edu-inp' placeholder='Masters/Bachelors' name='degree'/>
                   </div>
               </div>
               <div className="row">
